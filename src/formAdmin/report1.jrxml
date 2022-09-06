@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="216" pageHeight="288" columnWidth="176" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1257c047-3198-454b-a71a-a5668d978287">
+	<property name="ireport.zoom" value="1.771561000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from income WHERE id_income = $P{kode}]]>
+	</queryString>
+	<field name="id_income" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pendapatan_bersih" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="waktu" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="176" height="11" uuid="802b64cd-460a-4611-a3dd-c5d31591cc4c"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PENDAPATAN BERSIH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="18" width="100" height="11" uuid="3ab8d640-d4a4-4b7b-9d53-fbc79c8c8f68"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Jl.Dr. Cipto Mangun Kusumo No.9,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="29" width="100" height="10" uuid="ca4d8445-1a52-49f7-9953-97c0133c1ff9"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Lumbung,Badean, Kec.Bondowoso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="39" width="100" height="10" uuid="d314a7cb-6e6e-4a64-a656-3c3d1c1be7fb"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Kabupaten Bondowoso]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="51" width="176" height="1" uuid="0fa6e70c-037d-4ace-950a-a29e250688e7"/>
+			</line>
+			<line>
+				<reportElement x="1" y="11" width="175" height="1" uuid="b87d6971-8914-4c11-8736-5efc33d5fd6f"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="91" splitType="Stretch">
+			<textField>
+				<reportElement x="101" y="3" width="75" height="15" uuid="367d6739-6684-4ecd-be62-fcf2d6fe5711"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_income}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="4" width="53" height="11" uuid="19efc376-13ff-4752-a241-02f0d79f1804"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ID INCOME]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="36" width="75" height="11" uuid="31413c89-68f4-46d8-9337-aa3bb2d31b60"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pendapatan_bersih}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="36" width="90" height="11" uuid="d51dc449-a72a-4c96-871e-4dfced16b751"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PENDAPATAN BERSIH]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="68" width="75" height="11" uuid="e4b730b1-53be-412a-9c03-54b6feb79187"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{waktu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="68" width="90" height="11" uuid="649d47a3-f92c-4345-8c7a-6611a20e0dda"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TANGGAL KALKULASI]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="89" width="176" height="1" uuid="27ce4bd5-8899-4dda-a868-c171777f258d"/>
+			</line>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="50">
+			<image>
+				<reportElement x="0" y="0" width="53" height="50" uuid="a50b4570-5aa4-4bc0-89be-e701c927551e"/>
+				<imageExpression><![CDATA["C:\\Users\\HP\\Pictures\\logo martabak.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="53" y="3" width="123" height="20" uuid="e1b4d99b-b589-4147-aadb-27734cdc8898"/>
+				<text><![CDATA[Nikmati Manisnya Candu]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

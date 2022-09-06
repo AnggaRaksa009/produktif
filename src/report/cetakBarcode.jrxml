@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="216" pageHeight="324" columnWidth="176" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac8ea204-03d9-4ceb-afc8-36a4100602ee">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="no_invoice" class="java.lang.String"/>
+	<parameter name="realPath" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from stok_menu where id_menu = $P{no_invoice}]]>
+	</queryString>
+	<field name="id_menu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_menu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_menu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_menu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="waktu" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="0" width="51" height="20" uuid="a4e5c138-a57e-4c81-8d07-d4d6de8f7ed2"/>
+				<text><![CDATA[MBAK NIS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="38" height="20" uuid="a2433b08-8f17-4b55-8c20-cb945dfa5258"/>
+				<imageExpression><![CDATA["C:\\Users\\HP\\Pictures\\logo martabak.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="28" width="176" height="1" uuid="4fb1cef4-c7ac-4e75-9f50-2009902ccfbb"/>
+			</line>
+			<staticText>
+				<reportElement x="40" y="30" width="95" height="11" uuid="97147f96-0b20-4169-ba39-1de7c57934b0"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Jl.Dr. Cipto Mangun Kusumo No.9,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="41" width="103" height="10" uuid="40398a3e-38be-47de-abeb-899519d7c060"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Lumbung,Badean, Kec.Bondowoso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="51" width="100" height="11" uuid="3ea80942-aeb2-4c8d-a421-827dba2d3f23"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Kabupaten Bondowoso]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="66" width="176" height="1" uuid="0292db3c-8bc2-47e1-8069-ef9ebf5b6034"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="8" y="3" width="68" height="23" uuid="ddeb2f64-7889-4a5b-b38b-9c0d2bccd5cc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nomor Menu	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="26" width="68" height="23" uuid="4d23c2a7-3400-42ab-86f7-c844018a1e12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nama Menu]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="3" width="74" height="23" uuid="f879ed0f-6da7-40d3-a7ae-1602426cd382"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_menu}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="49" width="176" height="1" uuid="30e6f4ab-df6c-4534-9244-adc25ec27487"/>
+			</line>
+			<textField>
+				<reportElement x="90" y="26" width="63" height="23" uuid="d716fcca-632d-47b9-adff-9215b4e40969"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_menu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43">
+			<staticText>
+				<reportElement x="9" y="0" width="32" height="17" uuid="6b5788f4-fc64-4184-abc9-543d3859667a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="0" width="31" height="17" forecolor="#33CC00" backcolor="#33CC00" uuid="7da41bc1-a5f4-4738-ba45-94419ff70692"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Berhasil]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="23" width="86" height="19" uuid="c4dcbe5a-194f-47a1-bb4d-a8131506d9d2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{waktu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="23" width="35" height="19" uuid="016aad93-851c-47b2-ae85-f28113c11022"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[waktu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="42" width="176" height="1" uuid="77fff2b3-988b-4603-ac0b-3df2c953f668"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="35" y="0" width="106" height="50" uuid="42a15104-962e-4750-a280-8e625364a003"/>
+				<imageExpression><![CDATA[$P{realPath}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
